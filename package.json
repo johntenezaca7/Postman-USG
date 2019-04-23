@@ -1,0 +1,20 @@
+{
+  "name": "postman-usg",
+  "version": "1.0.0",
+  "description": "Using Jenkins and Postman's Newman to create a monitoring system for some tests:)",
+  "main": "index.js",
+  "scripts": {
+    "api_tests": "newman run https://www.getpostman.com/collections/cfb4d71641834fdaf493"
+  },
+  "keywords": [
+    "Jenkins",
+    "CI",
+    "Postman",
+    "Newman"
+  ],
+  "author": "John T",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^4.4.1"
+  }
+}
