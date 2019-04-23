@@ -1,0 +1,15 @@
+{
+	"id": "650d5abd-6cfe-4098-83e4-f57f69e6ffd1",
+	"name": "Production",
+	"values": [
+		{
+			"key": "usgURL",
+			"value": "https://search.usg.com/api/apollo/query-pipelines/usg-v2-global-search-documents/collections",
+			"description": "",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2019-04-23T14:33:39.192Z",
+	"_postman_exported_using": "Postman/7.0.7"
+}
