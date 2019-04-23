@@ -4,7 +4,7 @@
   "description": "Using Jenkins and Postman's Newman to create a monitoring system for some tests:)",
   "main": "index.js",
   "scripts": {
-    "api_tests": "newman run https://www.getpostman.com/collections/cfb4d71641834fdaf493 -e usg.postman_env.json --reporters=cli,htmlextra"
+    "api_tests": "newman run https://www.getpostman.com/collections/cfb4d71641834fdaf493 -e usg.postman_env.json"
   },
   "keywords": [
     "Jenkins",
