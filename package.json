@@ -4,7 +4,7 @@
   "description": "Using Jenkins and Postman's Newman to create a monitoring system for some tests:)",
   "main": "index.js",
   "scripts": {
-    "api_tests": "newman run https://www.getpostman.com/collections/cfb4d71641834fdaf493 -e usg.postman_env.json"
+    "api_tests": "newman run https://www.getpostman.com/collections/cfb4d71641834fdaf493 -e usg.postman_env.json --reporters=cli,htmlextra"
   },
   "keywords": [
     "Jenkins",
@@ -15,6 +15,8 @@
   "author": "John T",
   "license": "ISC",
   "dependencies": {
-    "newman": "^4.4.1"
+    "newman": "^4.4.1",
+    "newman-reporter-html": "^1.0.2",
+    "newman-reporter-htmlextra": "^1.6.10"
   }
 }
