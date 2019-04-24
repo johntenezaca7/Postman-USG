@@ -1,20 +1,25 @@
 var newman = require('newman');
+var NAME = 'USG Endpoint';
 
-newman.run(
-  {
+newman.run({
     collection: 'https://www.getpostman.com/collections/cfb4d71641834fdaf493',
     reporters: ['cli', 'htmlextra'],
     color:'on',
     environment: 'usg.postman_env.json'
-  },
-).on('start', function (err, args) { // on start of run, log to console
-  console.log('Running a collection...');
-}).on('done', function (err, summary) {
-  if (err || summary.error) {
-    console.error('collection run encountered an error.');
-  }
-  else {
-    console.log('collection run completed.');
-  }
-});
+  })
+  .on('start', 
+    function (err, args) { 
+      console.log(`Running a collection for ${ NAME }.`);
+    }
+  )
+  .on('done', 
+    function (err, summary) {
+      if (err || summary.error) {
+        console.error(`Collection run encountered an ERROR: ${ err || summary.error}.`);
+      }
+      else {
+        console.log(`Collection run for ${ NAME } completed.`);
+      }
+    }
+  );
 
