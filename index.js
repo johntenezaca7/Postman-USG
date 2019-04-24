@@ -7,7 +7,7 @@ const FILENAME = `${NAME} ${new Date().toISOString().substring(0,10)}`.split(' '
 
 newman.run({
     collection: 'https://www.getpostman.com/collections/cfb4d71641834fdaf493',
-    reporters: ['cli', 'html'],
+    reporters: ['cli', 'htmlextra'],
     color:'on',
     environment: 'usg.postman_env.json'
   })
