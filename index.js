@@ -1,9 +1,18 @@
-var newman = require('newman');
-var NAME = 'USG Endpoint';
+const newman = require('newman');
+const fs = require('fs');
+
+
+const NAME = 'USG Endpoint';
+const FILENAME = `${NAME} ${new Date().toISOString().substring(0,10)}`.split(' ').join('_');
 
 newman.run({
     collection: 'https://www.getpostman.com/collections/cfb4d71641834fdaf493',
     reporters: ['cli', 'htmlextra'],
+    reporter: {
+      htmlextra: {
+          export: `/Users/johntenezaca/Desktop/USG_REPORTS/${ FILENAME }.html`, // If not specified, the file will be written to `newman/` in the current working directory.
+      }
+    },
     color:'on',
     environment: 'usg.postman_env.json'
   })
