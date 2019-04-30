@@ -5,8 +5,7 @@ newman.run({
     collection: 'https://www.getpostman.com/collections/cfb4d71641834fdaf493',
     reporters: ['cli', 'htmlextra'],
     environment: 'usg.postman_env.json',
-    bail: true,
-    timeoutRequest: 10000
+    iterationCount: 10
   })
   .on('start', 
     function (err, args) { 
