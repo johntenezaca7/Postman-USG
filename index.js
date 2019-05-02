@@ -22,7 +22,7 @@ newman.run({
     if ( collatedErrors.length ) {
       collatedErrors.forEach(err => {
         console.error(`Collection run encountered ERRORs: ${ JSON.stringify(err) }.`);
-      })
+      });
     } else {
         console.log(`Collection run for ${ NAME } completed.`);
       }
